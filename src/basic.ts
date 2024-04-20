@@ -21,22 +21,19 @@ app.use("/all/*", async (c, next) => {
   });
   return auth(c, next);
 });
-
 app.get("/all", (c) => {
   return c.text("basic/all");
 });
-
 app.get("/all/get", (c) => {
   return c.text("basic/all/get");
 });
-
 app.post("/all/post", (c) => {
   return c.text("basic/all/post");
 });
 
 // 特定のパスのみ
 app.get(
-  "something",
+  "/something",
   (c, next) => {
     const auth = basicAuth({
       username: c.env.USERNAME,
