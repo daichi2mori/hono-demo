@@ -5,6 +5,7 @@ import basic from "./authentication/basic";
 import zod from "./validation/zod";
 import valibot from "./validation/valibot";
 import typebox from "./validation/typebox";
+import typia from "./validation/typia";
 
 const app = new Hono();
 
@@ -19,5 +20,6 @@ app.route("/bearer", bearer);
 app.route("/zod", zod);
 app.route("/valibot", valibot);
 app.route("/typebox", typebox);
+app.route("/typia", typia);
 
 export default app;
